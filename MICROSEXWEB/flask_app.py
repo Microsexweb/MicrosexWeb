@@ -1,17 +1,17 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, redirect, url_for, request, jsonify
 from ubc import unidad_basica_calculo
-from util import hex_a_op, op_a_hex
+from util import hex_a_op, op_a_hex, hex_a_bin
 
 app = Flask(__name__)
 
-# Rutas existentes
 @app.route('/')
 def index():
     return render_template('index.html')
 
 @app.route('/main')
 def main():
-    return render_template('main.html')
+    matricula = request.args.get('matricula')
+    return render_template('main.html', matricula=matricula)
 
 @app.route('/ubc')
 def ubc():
@@ -21,8 +21,7 @@ def ubc():
 def logout():
     return redirect(url_for('index'))
 
-# Nuevo endpoint para cálculos UBC
-@app.route('/calcular', methods=['POST'])
+@app.route('/ubc', methods=['POST'])
 def calcular():
     data = request.get_json()
 
@@ -42,5 +41,11 @@ def calcular():
         "acarreo": acarreo[-1]  # Último bit de acarreo
     })
 
+@app.route('/conv_hex', methods=['POST'])
+def conv_hex():
+    return jsonify ({ 
+        "bin_a": hex_a_bin(request.get_json()['a']), 
+        "bin_b": hex_a_bin(request.get_json()['b']),
+    })
 if __name__ == '__main__':
     app.run(debug=True)
