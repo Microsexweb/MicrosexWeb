@@ -15,10 +15,10 @@
 
 <body class="login-body" style="background-color: #D9D9D9;">
 
-    <h1 style="font-weight: 700 ;">MICROSEX</h1>
+    <h1 style="font-weight: 600 ; text-align: right ; margin-right: 301px; margin-top: 50px; ">MICROSEX</h1>
     <div class="login-box">
         <h2>LOGIN</h2>
-        <form onsubmit="return loginUser()">
+        <form onsubmit=" return loginUser()">
             <label>Email or Nickname</label><br>
             <input type="text" id="email" placeholder="Ej: unknown@gmail.com" ;
                 style="background-color: #5C6373; color: #D9D9D9;"><br>
@@ -66,6 +66,7 @@
     </script>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
     <!-- ...Nuestro Footer... -->
     {% include 'partials/footer.html' %}
 
