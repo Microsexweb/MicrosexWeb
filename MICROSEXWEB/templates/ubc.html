@@ -117,12 +117,12 @@
           <label style="padding-right: 5px;"> S<span style="font-size: 10px;">0</span></label>
           <br />
           <h3 style="font-weight: bold;">
-            <label for="s4">{{ s4 or '0' }}</label>
-            <label for="s3">{{ s3 or '0' }}</label>
-            <label for="s2">{{ s2 or '0' }}</label>
-            <label for="s1">{{ s1 or '0' }}</label>
-            <label for="s0">{{ s0 or '0' }}</label>
-          </h3>
+              <label id="label-s4">{{ s4 or '0' }}</label>  <!-- S4 -->
+              <label id="label-s3">{{ s3 or '0' }}</label>  <!-- S3 -->
+              <label id="label-s2">{{ s2 or '0' }}</label>  <!-- S2 -->
+              <label id="label-s1">{{ s1 or '0' }}</label>  <!-- S1 -->
+              <label id="label-s0">{{ s0 or '0' }}</label>  <!-- S0 -->
+            </h3>
         </div>
       </div>
 
@@ -137,7 +137,7 @@
         <!-- S4 -->
         <div style="position: absolute; top: 415px; left: 170px;">
           <label for="s4" style="position: absolute; top: -20px; left: 8px; color: #D9D9D9;">S₄</label>
-          <input type="text" id="s4" name="s4" maxlength="1" pattern="[01]" required
+          <input type="button" id="s4" name="s4" maxlength="1" pattern="[01]" required
             style="border: 2px solid #D9D9D9; border-radius: 20px; width: 40px; height: 40px; text-align: center; background-color: gray; color: white; font-weight: bold;"
             value="{{ s4 or '0' }}" />
         </div>
@@ -153,7 +153,7 @@
         <!-- S3 -->
         <div style="position: absolute; top: 415px; left: 225px;">
           <label for="s3" style="position: absolute; top: -20px; left: 8px; color: #D9D9D9;">S₃</label>
-          <input type="text" id="s3" name="s3" maxlength="1" pattern="[01]" required
+          <input type="button" id="s3" name="s3" maxlength="1" pattern="[01]" required
             style="border: 2px solid #D9D9D9; border-radius: 20px; width: 40px; height: 40px; text-align: center; background-color: gray; color: white; font-weight: bold;"
             value="{{ s3 or '' }}" />
         </div>
@@ -168,7 +168,7 @@
         <!-- S2 -->
         <div style="position: absolute; top: 415px; left: 448px;">
           <label for="s2" style="position: absolute; top: -20px; left: 8px; color: #D9D9D9;">S₂</label>
-          <input type="text" id="s2" name="s2" maxlength="1" pattern="[01]" required
+          <input type="button" id="s2" name="s2" maxlength="1" pattern="[01]" required
             style="border: 2px solid #D9D9D9; border-radius: 20px; width: 40px; height: 40px; text-align: center; background-color: gray; color: white; font-weight: bold;"
             value="{{ s2 or '' }}" />
         </div>
@@ -184,7 +184,7 @@
         <!-- S1 -->
         <div style="position: absolute; top: 415px; left: 528px;">
           <label for="s1" style="position: absolute; top: -20px; left: 8px; color: #D9D9D9;">S₁</label>
-          <input type="text" id="s1" name="s1" maxlength="1" pattern="[01]" required
+          <input type="button" id="s1" name="s1" maxlength="1" pattern="[01]" required
             style="border: 2px solid #D9D9D9; border-radius: 20px; width: 40px; height: 40px; text-align: center; background-color: gray; color: white; font-weight: bold;"
             value="{{ s1 or '' }}" />
         </div>
@@ -200,7 +200,7 @@
         <!-- S0 -->
         <div style="position: absolute; top: 415px; left: 1030px;">
           <label for="s0" style="position: absolute; top: -20px; left: 8px; color:#D9D9D9;">S₀</label>
-          <input type="text" id="s0" name="s0" maxlength="1" pattern="[01]" required
+          <input type="button" id="s0" name="s0" maxlength="1" pattern="[01]" required
             style="border: 2px solid #D9D9D9; border-radius: 20px; width: 40px; height: 40px; text-align: center; background-color: gray; color: white; font-weight: bold;"
             value="{{ s0 or '' }}" />
         </div>
