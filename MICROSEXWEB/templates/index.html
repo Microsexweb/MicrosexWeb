@@ -13,21 +13,38 @@
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 
-<body class="login-body" style="background-color: rgb(202, 202, 202);">
+<body class="login-body" style="background-color: #D9D9D9;">
 
-    <h1>MICROSEX</h1>
+    <h1 style="font-weight: 700 ;">MICROSEX</h1>
     <div class="login-box">
         <h2>LOGIN</h2>
         <form onsubmit="return loginUser()">
             <label>Email or Nickname</label><br>
-            <input type="text" id="email"><br>
+            <input type="text" id="email" placeholder="Ej: unknown@gmail.com" ;
+                style="background-color: #5C6373; color: #D9D9D9;"><br>
+            <style>
+                #email::placeholder {
+                    font-style: italic;
+                }
+            </style>
 
             <label>Password</label><br>
-            <input type="password" id="password"><br><br>
-            <button type="submit">REGISTER</button><br><br>
+            <input type="password" id="password" placeholder="Introduzca su contraseña por favor."
+                style="background-color: #5C6373; color: #D9D9D9;"><br><br>
+            <style>
+                #password::placeholder {
+                    font-style: italic;
+                }
+            </style>
+            <button type="submit">INGRESAR</button><br><br>
 
             <label>WITHOUT LOGIN</label><br>
-            <input type="text" placeholder="Escriba su matrícula" id="matricula"><br><br>
+            <input type="text" placeholder="De ingresar sin matrícula registrada." id="matricula"><br><br>
+            <style>
+                #matricula::placeholder {
+                    font-style: italic;
+                }
+            </style>
             <button onclick="goToMenu()">Continuar</button>
         </form>
     </div>
@@ -49,6 +66,8 @@
     </script>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <!-- ...Nuestro Footer... -->
+    {% include 'partials/footer.html' %}
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
