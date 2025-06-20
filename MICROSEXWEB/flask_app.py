@@ -17,6 +17,10 @@ def main():
 def ubc():
     return render_template('ubc.html')
 
+@app.route('/logout')
+def logout():
+    return redirect(url_for('index'))
+
 # Nuevo endpoint para cálculos UBC
 @app.route('/calcular', methods=['POST'])
 def calcular():
